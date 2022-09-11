@@ -1,7 +1,7 @@
 import React from "react"
 import "./Dashboard.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faVenusDouble } from '@fortawesome/free-solid-svg-icons'
 import ProgressIcon from "./ProgressIcon"
 
 function Dashboard() {
@@ -41,15 +41,59 @@ function Dashboard() {
                     <div className='chat-time'>
                         <p>2 hours ago</p>
                     </div>
-                    <div className='chat-time'>
-                        <p>2 hours ago</p>
+                </div>
+                <div className='chat'>
+                    <div className='chat-icon'>
+                        <FontAwesomeIcon icon={faUser}/>
+                    </div>
+                    <div className='chat-text'>
+                        <h4>Susan</h4>
+                        <p>is now following you</p>
                     </div>
                     <div className='chat-time'>
                         <p>2 hours ago</p>
                     </div>
                 </div>
+                <div className='chat'>
+                    <div className='chat-icon'>
+                        <FontAwesomeIcon icon={faUser}/>
+                    </div>
+                    <div className='chat-text'>
+                        <h4>Susan</h4>
+                        <p>is now following you</p>
+                    </div>
+                    <div className='chat-time'>
+                        <p>2 hours ago</p>
+                    </div>
+                </div>
+                <div className='chat'>
+                    <div className='chat-icon'>
+                        <FontAwesomeIcon icon={faUser}/>
+                    </div>
+                    <div className='chat-text'>
+                        <h4>Susan</h4>
+                        <p>is now following you</p>
+                    </div>
+                    <div className='chat-time'>
+                        <p>2 hours ago</p>
+                    </div>
+                </div>
+                <div className='chat'>
+                    <div className='chat-icon'>
+                        <FontAwesomeIcon icon={faVenusDouble}/>
+                    </div>
+                    <div className='chat-text'>
+                        <h4>Susan</h4>
+                        <p>Matched 90% with you</p>
+                    </div>
+                    <div className='chat-time'>
+                        <p>3 hours ago</p>
+                    </div>
+                </div>
             </div>
-            <div className="dashboard-item"></div>
+            <div className="dashboard-item">
+             
+            </div>
             <div className="dashboard-item"></div>
 
         </div>
