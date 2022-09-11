@@ -1,0 +1,141 @@
+.profile-page{
+    display: flex;
+    width: 100%;
+    width: 800px;
+}
+
+.prof-left{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    background-color: #142037;
+    color: pink;
+    align-items: center;
+    
+}
+
+.top-edit{
+padding: 6px;
+border: none;
+outline: none;
+margin-bottom: 10px;
+border-radius: 5px;
+background-color: pink;
+color: #142037;
+cursor: pointer;
+margin-left: 300px; 
+font-size: 15px; 
+}
+
+.top-edit:hover{
+    background-color: #9d2e3c;
+    color: pink;
+    transition: 0.3s ease-in;    
+}
+
+.prof-top{
+text-align: center;
+    
+}
+img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.prof-top h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.prof-connect{
+    display: flex;
+    
+    width: 200px;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+
+.prof-connect h3{
+    text-align: center;
+    
+}
+
+.line{
+    background-color: #9d2e3c;
+    width: 2px;
+    
+}
+.left-edits{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-edits button{
+padding: 10px;
+border: none;
+outline: none;
+margin-bottom: 10px;
+border-radius: 5px;
+background-color: pink;
+color: #142037;
+}
+
+.left-edits button:hover{
+    background-color: #9d2e3c;
+    color: pink;
+    transition: 0.3s ease-in;
+}
+
+.prof-left h3{
+    color: #9d2e3c;
+}
+
+.prof-right{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: pink;
+    
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    
+    
+    align-items: center;
+}
+
+.right-heading{
+    display: flex;
+    background-color: blue;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.basic-info{
+    display: flex;
+    background-color: #9d2e3c;
+}
+
+.basic-first{
+    display: flex;
+    padding: 10px;
+}
+
+.basic-first input{
+    padding: 5px;
+    width: 150px;
+    margin-left: 10px;
+}
+
+.basic-second{
+    
+}
+
+textarea{
+    resize: none;
+}
