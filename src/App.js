@@ -43,14 +43,14 @@ function App() {
         </Route>
 
         <Route path="/dashboard">
-          <Header />
+          <Header user={user}/>
           <Route path="/dashboard/main">
 
             <Dashboard user={user} />
 
           </Route>
           <Route path="/dashboard/follow">
-            <Following/>
+            <Following user={user}/>
           </Route>
 
           <Route path="/dashboard/profile">

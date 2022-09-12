@@ -2,10 +2,18 @@ import React from "react"
 import './Header.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHandHoldingHeart, faSearch, faMessage, faAddressBook, faCircleInfo, faGear, faGlobe, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
-
+import {femaleUrls, maleUrls} from "./data.js"
 
 function Header({user}) {
     console.log(user)
+    let image = ""
+
+    if(user.gender === "male"){
+        image = maleUrls[Math.floor(Math.random() * maleUrls.length)]
+
+    }else {
+        image = femaleUrls[Math.floor(Math.random() * femaleUrls.length)]
+    }
     
     return (
         <div className="header">
@@ -21,8 +29,8 @@ function Header({user}) {
             </div>
 
             <div className="header-profile">
-                <p>Hi</p>
-                <img src='profile.webp'></img>
+                <p>Hi, {user.first_name}</p>
+                <img src={image}></img>
             </div>
         </div>
     )

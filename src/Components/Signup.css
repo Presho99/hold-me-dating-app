@@ -27,6 +27,8 @@
     border: none;
     border-bottom: 1px solid #9d2e3c;
     background-color: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 
 .signin form input::placeholder{

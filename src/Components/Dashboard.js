@@ -1,11 +1,23 @@
-import React, { state, useEffect } from "react"
+import React, { state, useEffect, useState } from "react"
 import "./Dashboard.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChartSimple, faGlobe, faGear, faCircleInfo, faContactBook, faFolder, faRightFromBracket, faVenusDouble } from '@fortawesome/free-solid-svg-icons'
 import ProgressIcon from "./ProgressIcon"
 import { useHistory } from "react-router-dom"
+import {femaleUrls, maleUrls} from "./data.js"
 
-function Dashboard({}) {
+function Dashboard({ user }) {
+    const [matches, setMatches] = useState({})
+
+
+    useEffect((()=>{
+        fetch(`http://localhost:9393/matches/${user.first_name}`)
+        .then (r => r.json())
+        .then(console.log)
+    }
+    
+    ),[user])
+    console.log(matches)
     const quotes = [
         "I crave a love that drowns oceans",
         "I fell for you and I am still falling",
@@ -19,10 +31,22 @@ function Dashboard({}) {
         "I am mine before I am ever anyone else's"
 
     ]
+    let images = []
+    if(user.gender == "male") {
+
+        for (let i=0; i<5; i++){
+            images.push(femaleUrls[Math.floor(Math.random() * femaleUrls.length )])
+        } 
+    }
+    else{
+        for (let i=0; i<5; i++){
+        images.push(maleUrls[Math.floor(Math.random() * maleUrls.length )])
+    }
+}
 
     let history = useHistory()
 
-    function handleFollow(){
+    function handleFollow() {
         history.push("/dashboard/follow")
     }
     // const [users, setUsers] = useState([])
@@ -78,7 +102,18 @@ function Dashboard({}) {
 
             </div>
             <div className="dashboard-item">
-                <div className='panel' style={{ backgroundImage: "url('profile.webp')" }}>
+                {user.my_match.map((match, index) => {
+                    return(
+                        <div className='panel' style={{ backgroundImage: `url(${images[index]})` }}>
+                    <h3 style={{ color: "#120A24", marginTop: "200px" }}>{match.first_name}, {match.birth}</h3>
+                </div>
+
+                    )
+                })}
+                
+
+
+                {/* <div className='panel' style={{ backgroundImage: "url('profile.webp')" }}>
                     <h3 style={{ color: "#120A24", marginTop: "200px" }}>Susan,24</h3>
                 </div>
                 <div className='panel' style={{ backgroundImage: "url('profile.webp')" }}>
@@ -86,68 +121,36 @@ function Dashboard({}) {
                 </div>
                 <div className='panel' style={{ backgroundImage: "url('profile.webp')" }}>
                     <h3 style={{ color: "#120A24", marginTop: "200px" }}>Susan,24</h3>
-                </div>
-                <div className='panel' style={{ backgroundImage: "url('profile.webp')" }}>
-                    <h3 style={{ color: "#120A24", marginTop: "200px" }}>Susan,24</h3>
-                </div>
+                </div> */}
 
 
             </div>
             <div className="dashboard-item">
-                <h3>Following</h3>
-                <div className='chat'>
-                    <div className='chat-icon'>
+                
 
-                        <img src="profile.webp" style={{ width: "60px", height: "60px", }} />
+                <h3>Following</h3> 
+                {user.my_match.slice(0, 3).map((match, index)=>{
+                    return(
+                        <div className='chat' key={match.id}>
+                        <div className='chat-icon'>
+    
+                            <img src={images[index]} style={{ width: "60px", height: "60px", }} />
+    
+                        </div>
+                        <div className='chat-text'>
+                            <h4>{match.first_name}</h4>
+                            <p>matched {match.percentage} with you</p>
+                        </div>
+                        <div className='chat-time'>
+                            <p>{Math.floor(Math.random() * 5)} hours ago</p>
+                        </div>
+                    </div>
+                    )
+                   
 
-                    </div>
-                    <div className='chat-text'>
-                        <h4>Susan</h4>
-                        <p>matched with you</p>
-                    </div>
-                    <div className='chat-time'>
-                        <p>2 hours ago</p>
-                    </div>
-                </div>
-                <div className='chat'>
-                    <div className='chat-icon'>
 
-                        <img src="profile.webp" style={{ width: "60px", height: "60px", }} />
-
-                    </div>
-                    <div className='chat-text'>
-                        <h4>Susan</h4>
-                        <p>is now following you</p>
-                    </div>
-                    <div className='chat-time'>
-                        <p>2 hours ago</p>
-                    </div>
-                </div>
-                <div className='chat'>
-                    <div className='chat-icon'>
-                        <img src="profile.webp" style={{ width: "60px", height: "60px", }} />
-                    </div>
-                    <div className='chat-text'>
-                        <h4>Susan</h4>
-                        <p>is now following you</p>
-                    </div>
-                    <div className='chat-time'>
-                        <p>2 hours ago</p>
-                    </div>
-                </div>
-                <div className='chat'>
-                    <div className='chat-icon'>
-                        <img src="profile.webp" style={{ width: "60px", height: "60px", }} />
-                    </div>
-                    <div className='chat-text'>
-                        <h4>Susan</h4>
-                        <p>is now following you</p>
-                    </div>
-                    <div className='chat-time'>
-                        <p>2 hours ago</p>
-                    </div>
-                </div>
-
+                })}
+                
             </div>
 
             <div className="dashboard-item">
@@ -160,7 +163,7 @@ function Dashboard({}) {
             </div>
 
 
-        </div>
+        </div >
     )
 }
 
