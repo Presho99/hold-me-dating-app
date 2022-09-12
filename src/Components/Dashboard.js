@@ -3,8 +3,9 @@ import "./Dashboard.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChartSimple, faGlobe, faGear, faCircleInfo, faContactBook, faFolder, faRightFromBracket, faVenusDouble } from '@fortawesome/free-solid-svg-icons'
 import ProgressIcon from "./ProgressIcon"
+import { useHistory } from "react-router-dom"
 
-function Dashboard() {
+function Dashboard({}) {
     const quotes = [
         "I crave a love that drowns oceans",
         "I fell for you and I am still falling",
@@ -18,6 +19,12 @@ function Dashboard() {
         "I am mine before I am ever anyone else's"
 
     ]
+
+    let history = useHistory()
+
+    function handleFollow(){
+        history.push("/dashboard/follow")
+    }
     // const [users, setUsers] = useState([])
     // useEffect(() => {
     //     fetch("http://localhost:9393/men")
@@ -36,7 +43,7 @@ function Dashboard() {
                     
                     <div className="main-following" style={{display: "flex", marginTop:"20px"}}>
                         <FontAwesomeIcon icon={faVenusDouble} />
-                        <p style={{marginLeft: "20px"}}>Following</p>
+                        <p style={{marginLeft: "20px", cursor: "pointer"}} onClick={handleFollow}>Following</p>
                     </div>
                     <div className="main-new" style={{display: "flex", marginTop:"20px"}}>
                         <FontAwesomeIcon icon={faGlobe} />

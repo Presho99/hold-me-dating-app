@@ -8,6 +8,7 @@ import Profile from './Components/Profile';
 import Navbar from './Components/Navbar';
 import Signin from './Components/Signin';
 import Signup from './Components/Signup';
+import Following from './Components/Following';
 
 function App() {
   const [user, setUser] = useState({})
@@ -23,24 +24,42 @@ function App() {
       <Dashboard/> */}
       <Switch>
         <Route path="/home">
-          <Switch>
+          
             <div className='home'>
               <Navbar />
-             
+
 
               <Route exact path="/home/signin">
-              <Signin getUser={getUser} />
+
+
+                <Signin getUser={getUser} />
               </Route>
               <Route path="/home/signup">
+
                 <Signup getUser={getUser} />
               </Route>
             </div>
-          </Switch>
+          
         </Route>
 
         <Route path="/dashboard">
-          <Dashboard user={user}/>
+          <Header />
+          <Route path="/dashboard/main">
+
+            <Dashboard user={user} />
+
+          </Route>
+          <Route path="/dashboard/follow">
+            <Following/>
+          </Route>
+
+          <Route path="/dashboard/profile">
+            <Profile/>
+          </Route>
+
         </Route>
+
+
       </Switch>
 
 

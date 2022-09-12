@@ -4,7 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHandHoldingHeart, faSearch, faMessage, faAddressBook, faCircleInfo, faGear, faGlobe, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 
 
-function Header() {
+function Header({user}) {
+    console.log(user)
+    
     return (
         <div className="header">
             <div className="logo">
@@ -19,7 +21,7 @@ function Header() {
             </div>
 
             <div className="header-profile">
-                <p>Hi, Manuel</p>
+                <p>Hi</p>
                 <img src='profile.webp'></img>
             </div>
         </div>

@@ -41,7 +41,7 @@ function Signup({getUser}){
             .then(r => r.json())
             .then((user)=> {
                 getUser(user)
-                history.push("/dashboard")
+                history.push("/dashboard/main")
 
             })
     }
