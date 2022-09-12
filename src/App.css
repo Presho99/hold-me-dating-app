@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Roboto:wght@400;500;700&display=swap');
+
 .App {
   text-align: center;
   background: linear-gradient(70deg, #120A24,  #30245C, #120A24);
+  font-family: "Roboto", sans-serif;
 }
+
+.home{
+  display: flex;
+  width: 900px;
+background-color: pink;
+  height: 90vh;
+  margin: 40px auto;
+  justify-content: space-between;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 9px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 9px -2px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 9px -2px rgba(0,0,0,0.75);
+}
+
 
 .App-logo {
   height: 40vmin;

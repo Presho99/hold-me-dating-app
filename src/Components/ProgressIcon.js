@@ -1,6 +1,6 @@
 export default function ProgressIcon({ percentProgress }) {
     return (
-        <svg className="progress-svg" stroke-dashoffset="0" stroke="#FFFFFF" stroke-linecap="round" stroke-width="35" fill='none' class="bi bi-grid" height="256" viewBox="0 0 256 256" width="256" xmlns="http://www.w3.org/2000/svg">
+        <svg className="progress-svg" stroke-dashoffset="0" stroke="#FFFFFF" stroke-linecap="round" stroke-width="35" fill='none' class="bi bi-grid" height="140" viewBox="0 0 256 256" width="140" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="linearColors" x1="1" y1="0" x2="0" y2="1">
                     <stop offset="5%" stop-color="#01E400"></stop>

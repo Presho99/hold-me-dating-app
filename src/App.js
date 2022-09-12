@@ -4,26 +4,44 @@ import React, { useEffect, useState } from "react"
 import Dashboard from './Components/Dashboard';
 import Header from "./Components/Header"
 import { Route, Switch } from "react-router-dom"
-import Home from "./Components/Home"
 import Profile from './Components/Profile';
-
+import Navbar from './Components/Navbar';
+import Signin from './Components/Signin';
+import Signup from './Components/Signup';
 
 function App() {
-  const [data, setData] = useState({})
+  const [user, setUser] = useState({})
 
-  useEffect(() => {
-    fetch('http://localhost:9393/matches')
-    .then((r) => r.json())
-    .then((setData))
-  }, [])
-  console.log(data)
+  function getUser(signedInUser) {
+    setUser(signedInUser)
+  }
   return (
     <div className="App">
       {/* <Profile/> */}
-      <Home/>
+
       {/* <Header/>
       <Dashboard/> */}
+      <Switch>
+        <Route path="/home">
+          <Switch>
+            <div className='home'>
+              <Navbar />
+             
 
+              <Route exact path="/home/signin">
+              <Signin getUser={getUser} />
+              </Route>
+              <Route path="/home/signup">
+                <Signup getUser={getUser} />
+              </Route>
+            </div>
+          </Switch>
+        </Route>
+
+        <Route path="/dashboard">
+          <Dashboard user={user}/>
+        </Route>
+      </Switch>
 
 
 

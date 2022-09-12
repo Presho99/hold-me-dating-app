@@ -10,15 +10,7 @@ function Home(){
     return(
         <div className='home'>
         
-    <Navbar  />
-    <Switch>
-    <Route path="/signin">
-        <Signin/>
-    </Route>
-    <Route path="/signup">
-        <Signup/>
-    </Route>
-    </Switch>
+   
     
     </div>
     )

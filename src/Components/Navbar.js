@@ -9,8 +9,8 @@ function Navbar(){
         <div className='navbar' style={{backgroundImage: "url('login.webp')"}}>
             <nav >
 
-                <NavLink to="/signup" style={{textDecoration: "none"}}><h1>Signup</h1></NavLink>
-                <NavLink to="/signin" style={{textDecoration: "none"}}><h1>Login</h1></NavLink>
+                <NavLink to="/home/signup" style={{textDecoration: "none"}}><h1>Signup</h1></NavLink>
+                <NavLink to="/home/signin" style={{textDecoration: "none"}}><h1>Login</h1></NavLink>
             </nav>
             
 
