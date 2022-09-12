@@ -10,25 +10,26 @@ function Profile() {
                 </button>
                 <h2>Profile</h2>
                 <div className='prof-top'>
-                    <img src='profile.jpeg' />
+                    <img src='profile.webp' />
                     <h3>Susan O</h3>
-                    <p>23</p>
+                    <p>Sales</p>
+                    <p></p>
                 </div>
 
                 <div className='prof-connect'>
                     <div className='conn-photo'>
                         <h3>4</h3>
-                        <p>posts</p>
+                        <p>matches</p>
                     </div>
                     <div className='line'></div>
                     <div className='conn-following'>
-                        <h3>4</h3>
-                        <p>following</p>
+                        <h3>Sign</h3>
+                        <p>Scorpio</p>
                     </div>
                     <div className='line'></div>
                     <div className='conn-likes'>
-                        <h3>4</h3>
-                        <p>likes</p>
+                        <h3>23</h3>
+                        <p>years</p>
                     </div>
                 </div>
                 <div className='prof-bio'>
@@ -45,8 +46,8 @@ function Profile() {
                     </p>
                 </div>
                 <div className='left-edits'>
-                    <button>Upload New Avatar</button>
-                    <button>Delete</button>
+                    
+                    <button style={{cursor: "pointer"}}>Delete</button>
                 </div>
             </div>
 
@@ -94,47 +95,7 @@ function Profile() {
 
                 <div className='preference'>
                     <h2>Preferences</h2>
-                    <form>
-                        <div className='pref-one'>
-                           <input type="checkbox" value="Calls" id="call"/> 
-                           <label for="call">Call</label>
-                           <input type="checkbox" value="Text" id="text"/> 
-                           <label for="text">Texts</label>
-                           
-                        </div>
-
-                        <div className='pref-two'>
-                           <input type="checkbox" value="Early" id="early"/> 
-                           <label for="call">Early-Riser</label>
-                           <input type="checkbox" value="Night" id="night"/> 
-                           <label for="text">Night-Owl</label>
-                          
-                        </div>
-
-                        <div className='pref-three'>
-                           <input type="checkbox" value="City" id="city"/> 
-                           <label for="call">City</label>
-                           <input type="checkbox" value="Country" id="country"/> 
-                           <label for="text">Countryside</label>
-                          
-                        </div>
-
-                        <div className='pref-four'>
-                           <input type="checkbox" value="Intro" id="intro"/> 
-                           <label for="call">Introverted</label>
-                           <input type="checkbox" value="Extro" id="extro"/> 
-                           <label for="text">Extrovert</label>
-                          
-                        </div>
-
-                        <div className='pref-five'>
-                           <input type="checkbox" value="Early" id="early"/> 
-                           <label for="call">Early-Riser</label>
-                           <input type="checkbox" value="Night" id="night"/> 
-                           <label for="text">Night-Owl</label>
-                         
-                        </div>
-                    </form>
+                    
                 </div>
             </div>
 

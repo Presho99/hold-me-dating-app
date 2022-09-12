@@ -1,5 +1,6 @@
 .profile-page{
     display: flex;
+    flex-direction: column;
     width: 100%;
     width: 800px;
 }
@@ -53,8 +54,9 @@ img{
 
 .prof-connect{
     display: flex;
-    
-    width: 200px;
+    background-color: transparent;
+    padding: 30px 20px 20px 20px;
+    width: 300px;
     justify-content: space-between;
     margin-top: -10px;
 }
@@ -95,7 +97,7 @@ color: #142037;
 }
 
 .prof-right{
-    display: flex;
+    display: block;
     flex-direction: column;
     width: 500px;
     background-color: pink;
@@ -118,6 +120,7 @@ color: #142037;
 
 .basic-info{
     display: flex;
+    height: 100px;
     background-color: #9d2e3c;
 }
 
@@ -133,9 +136,14 @@ color: #142037;
 }
 
 .basic-second{
-    
+  margin-top: 10px;  
 }
 
 textarea{
     resize: none;
+}
+
+.prof-bio{
+    background-color: transparent;
+    padding: 20px;
 }

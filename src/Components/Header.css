@@ -7,7 +7,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: #142037;
+    background: linear-gradient(70deg, #120A24,  #30245C, #120A24);
     padding: 15px 10px 10px 15px;
     align-items: center;
     color: pink;
