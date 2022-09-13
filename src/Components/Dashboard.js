@@ -106,7 +106,7 @@ function Dashboard({ user }) {
                 {user.my_match.slice(0, 4).map((match, index) => {
                     return(
                         <div className='panel' style={{ backgroundImage: `url(${images[index]})` }}>
-                    <h3 style={{ color: "#120A24", marginTop: "500px" }}>{match.first_name}, {match.birth}</h3>
+                    <h3 style={{ color: "pink", marginTop: "300px", backgroundColor: "#142037", width:"70%", padding: "5px, 0" }}>{match.first_name}, {match.birth}</h3>
                 </div>
 
                     )
@@ -129,7 +129,7 @@ function Dashboard({ user }) {
             <div className="dashboard-item">
                 
 
-                <h3>Matches</h3> 
+                <h3 style={{color: "pink"}}>Matches</h3> 
                 {user.my_match.slice(0, 4).map((match, index)=>{
                     return(
                         <div className='chat' key={match.id}>

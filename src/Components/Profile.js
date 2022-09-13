@@ -41,7 +41,7 @@ function Profile({user}) {
 
                 <div className='prof-connect'>
                     <div className='conn-photo' onClick={handleFollow}>
-                        <h3>100</h3>
+                        <h3>View</h3>
                         <p>matches</p>
                     </div>
                     <div className='line'></div>
