@@ -18,10 +18,10 @@
     margin: 10px auto;
 }
 
-.signup form input{
+.signup form input[type=text], .signup form input[type=password], .signup form input[type=date]{
     width: 200px;
     color: #9d2e3c;
-    height: 50px;
+    height: 40px;
     margin-bottom: 10px;
     outline: none;
     border: none;

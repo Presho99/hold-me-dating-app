@@ -9,7 +9,7 @@
 
 .home{
   display: flex;
-  width: 900px;
+  width: 700px;
 background-color: pink;
   height: 90vh;
   margin: 40px auto;
@@ -21,8 +21,7 @@ background-color: pink;
 }
 
 .input{
-  -moz-appearance: none;
-    -webkit-appearance: none;
+  
 }
 
 

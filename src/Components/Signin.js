@@ -39,8 +39,8 @@ function Signin({getUser}){
         <div className='signin' style={{alignItems: "center", justifyContent: "center"}}>
              <h1><FontAwesomeIcon icon={faHandHoldingHeart} style={{fontSize: "80", color: "#9D2E3C"}}/></h1>
                 <form onSubmit={handleLogin}>
-                  <input type="text" required placeholder='Username' value={username} onChange={(e)=>setUsername(e.target.value)} onBlur={handleFetch}/>
-                  <input type="password" required placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                  <input type="text" required placeholder='Username' value={username} onChange={(e)=>setUsername(e.target.value)} onBlur={handleFetch} autoComplete="off"/>
+                  <input type="password" required placeholder='Password' value={password} onChange={(e)=>setPassword(e.target.value)} />
                   <button className='login-btn'>Login</button>
                 </form>
                 <p>Forgot Password?</p>
