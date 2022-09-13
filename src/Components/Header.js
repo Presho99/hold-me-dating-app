@@ -5,7 +5,7 @@ import { faHandHoldingHeart, faSearch, faMessage, faAddressBook, faCircleInfo, f
 import {femaleUrls, maleUrls} from "./data.js"
 
 function Header({user}) {
-    console.log(user)
+    
     let image = ""
 
     if(user.gender === "male"){
@@ -30,7 +30,7 @@ function Header({user}) {
 
             <div className="header-profile">
                 <p>Hi, {user.first_name}</p>
-                <img src={image}></img>
+                
             </div>
         </div>
     )

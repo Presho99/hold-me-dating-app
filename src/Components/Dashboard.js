@@ -5,7 +5,7 @@ import { faChartSimple, faGlobe, faGear, faCircleInfo, faContactBook, faFolder, 
 import ProgressIcon from "./ProgressIcon"
 import { useHistory } from "react-router-dom"
 import {femaleUrls, maleUrls} from "./data.js"
-
+import Profile from "./Profile"
 function Dashboard({ user }) {
     const [matches, setMatches] = useState({})
 
@@ -58,7 +58,8 @@ function Dashboard({ user }) {
     return (
         <div className="dashboard">
             <div className="dashboard-item">
-                <div className="main-menu" style={{display: "flex", flexDirection: "column"}}>
+                <Profile user={user}/>
+                {/* <div className="main-menu" style={{display: "flex", flexDirection: "column"}}>
                     <h3 style={{color: "#9d2e3c"}}>Main Menu</h3>
                     <div className="main-dashboard" style={{display: "flex", marginTop:"20px"}}>
                         <FontAwesomeIcon icon={faChartSimple} />
@@ -81,9 +82,9 @@ function Dashboard({ user }) {
                         <FontAwesomeIcon icon={faContactBook} />
                         <p style={{marginLeft: "20px"}}>Contacts</p>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="support" style={{display: "flex", flexDirection: "column", marginTop: "20px"}}>
+                {/* <div className="support" style={{display: "flex", flexDirection: "column", marginTop: "20px"}}>
                     <h3 style={{color: "#9d2e3c"}}>Support</h3>
                     <div className="settings" style={{display: "flex", marginTop: "20px"}}>
                         <FontAwesomeIcon icon={faGear} />
@@ -98,14 +99,14 @@ function Dashboard({ user }) {
                         <p style={{marginLeft: "20px"}}>Logout</p>
                     </div>
 
-                </div>
+                </div> */}
 
             </div>
             <div className="dashboard-item">
-                {user.my_match.slice(-4).map((match, index) => {
+                {user.my_match.slice(0, 4).map((match, index) => {
                     return(
                         <div className='panel' style={{ backgroundImage: `url(${images[index]})` }}>
-                    <h3 style={{ color: "#120A24", marginTop: "200px" }}>{match.first_name}, {match.birth}</h3>
+                    <h3 style={{ color: "#120A24", marginTop: "500px" }}>{match.first_name}, {match.birth}</h3>
                 </div>
 
                     )
@@ -128,8 +129,8 @@ function Dashboard({ user }) {
             <div className="dashboard-item">
                 
 
-                <h3>Following</h3> 
-                {user.my_match.slice(-3).map((match, index)=>{
+                <h3>Matches</h3> 
+                {user.my_match.slice(0, 4).map((match, index)=>{
                     return(
                         <div className='chat' key={match.id}>
                         <div className='chat-icon'>

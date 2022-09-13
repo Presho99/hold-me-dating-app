@@ -22,13 +22,13 @@ function App() {
       <BrowserRouter>
 
       <Switch>
-        <Route  path={"/"}>
+        <Route  exact path={"/"}>
           <div className='home'>
             <Navbar />
-            <Route  exact path="/">
+            <Route  exact path ="/">
               <Signin getUser={getUser} />
             </Route>
-            <Route path="/signup">
+            <Route  path="/signup">
               <Signup getUser={getUser} />
             </Route>
           </div>
