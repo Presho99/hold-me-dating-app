@@ -9,6 +9,7 @@ import Navbar from './Components/Navbar';
 import Signin from './Components/Signin';
 import Signup from './Components/Signup';
 import Following from './Components/Following';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   const [user, setUser] = useState({})
@@ -18,43 +19,34 @@ function App() {
   }
   return (
     <div className="App">
-      {/* <Profile/> */}
+      <BrowserRouter>
 
-      {/* <Header/>
-      <Dashboard/> */}
       <Switch>
-        <Route path="/home">
-          
-            <div className='home'>
-              <Navbar />
-
-
-              <Route exact path="/home/signin">
-
-
-                <Signin getUser={getUser} />
-              </Route>
-              <Route path="/home/signup">
-
-                <Signup getUser={getUser} />
-              </Route>
-            </div>
-          
+        <Route  path={"/"}>
+          <div className='home'>
+            <Navbar />
+            <Route  exact path="/">
+              <Signin getUser={getUser} />
+            </Route>
+            <Route path="/signup">
+              <Signup getUser={getUser} />
+            </Route>
+          </div>
         </Route>
 
         <Route path="/dashboard">
-          <Header user={user}/>
+          <Header user={user} />
           <Route path="/dashboard/main">
 
             <Dashboard user={user} />
 
           </Route>
           <Route path="/dashboard/follow">
-            <Following user={user}/>
+            <Following user={user} />
           </Route>
 
           <Route path="/dashboard/profile">
-            <Profile/>
+            <Profile />
           </Route>
 
         </Route>
@@ -62,17 +54,8 @@ function App() {
 
       </Switch>
 
+</BrowserRouter>
 
-
-      {/* <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="./dashboard">
-          <Dashboard />
-        </Route>
-
-      </Switch> */}
 
     </div>
 

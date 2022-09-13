@@ -102,7 +102,7 @@ function Dashboard({ user }) {
 
             </div>
             <div className="dashboard-item">
-                {user.my_match.map((match, index) => {
+                {user.my_match.slice(-4).map((match, index) => {
                     return(
                         <div className='panel' style={{ backgroundImage: `url(${images[index]})` }}>
                     <h3 style={{ color: "#120A24", marginTop: "200px" }}>{match.first_name}, {match.birth}</h3>
@@ -129,7 +129,7 @@ function Dashboard({ user }) {
                 
 
                 <h3>Following</h3> 
-                {user.my_match.slice(0, 3).map((match, index)=>{
+                {user.my_match.slice(-3).map((match, index)=>{
                     return(
                         <div className='chat' key={match.id}>
                         <div className='chat-icon'>
