@@ -13,26 +13,17 @@ import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   const [user, setUser] = useState({})
+  
 
   function getUser(signedInUser) {
     setUser(signedInUser)
   }
   return (
     <div className="App">
-      <BrowserRouter>
+      
 
       <Switch>
-        <Route  exact path={"/"}>
-          <div className='home'>
-            <Navbar />
-            <Route  exact path ="/">
-              <Signin getUser={getUser} />
-            </Route>
-            <Route  path="/signup">
-              <Signup getUser={getUser} />
-            </Route>
-          </div>
-        </Route>
+        
 
         <Route path="/dashboard">
           <Header user={user} />
@@ -51,10 +42,14 @@ function App() {
 
         </Route>
 
+        <Route  exact path={"/"}>
+          <Navbar getUser={getUser}/>
+        </Route>
+
 
       </Switch>
 
-</BrowserRouter>
+
 
 
     </div>
