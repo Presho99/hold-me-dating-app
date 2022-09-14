@@ -1,19 +1,31 @@
 import React, { state, useEffect, useState } from "react"
 import "./Dashboard.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChartSimple, faGlobe, faGear, faCircleInfo, faContactBook, faFolder, faRightFromBracket, faVenusDouble } from '@fortawesome/free-solid-svg-icons'
+import { faChartSimple, faGlobe, faGear, faCircleInfo, faContactBook, faFolder, faRightFromBracket, faVenusDouble, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import ProgressIcon from "./ProgressIcon"
 import { useHistory } from "react-router-dom"
 import {femaleUrls, maleUrls} from "./data.js"
 import Profile from "./Profile"
-function Dashboard({ user }) {
+function Dashboard({ dashUser }) {
     const [matches, setMatches] = useState({})
+    const [user, setUser] = useState(dashUser)
+
+    useEffect((() => {
+        fetch(`http://localhost:9393/person/${dashUser.first_name}`)
+        .then(r => r.json())
+        .then(user => {
+        
+          setUser(user)
+         
+        })
+    }), 
+    [])
 
 
     useEffect((()=>{
         fetch(`http://localhost:9393/matches/${user.first_name}`)
         .then (r => r.json())
-        .then(console.log)
+        .then(setMatches)
     }
     
     ),[user])
@@ -49,12 +61,15 @@ function Dashboard({ user }) {
     function handleFollow() {
         history.push("/dashboard/follow")
     }
-    // const [users, setUsers] = useState([])
-    // useEffect(() => {
-    //     fetch("http://localhost:9393/men")
-    //     .then((r) => r.json())
-    //     .then((users) => setUsers(users))
-    // }, {})
+   
+    function handleRemove(match){
+        fetch(`http://localhost:9393/match/${user.id}/${match.id}`, {method : "DELETE"})
+        .then(r => r.json())
+        .then(()=> {
+            alert(`${match.first_name} is no longer your match`)
+        })
+
+    }
     return (
         <div className="dashboard">
             <div className="dashboard-item">
@@ -103,9 +118,11 @@ function Dashboard({ user }) {
 
             </div>
             <div className="dashboard-item">
-                {user.my_match.slice(0, 4).map((match, index) => {
+            
+                {user.my_match.slice(user.my_match.length-4, user.my_match.length).map((match, index) => {
                     return(
                         <div className='panel' style={{ backgroundImage: `url(${images[index]})` }}>
+                            <FontAwesomeIcon icon={faCircleXmark} style={{marginLeft:"150px", marginTop: "10px", color: "pink"}} onClick={()=>handleRemove(match)}/>
                     <h3 style={{ color: "pink", marginTop: "300px", backgroundColor: "#142037", width:"70%", padding: "5px, 0" }}>{match.first_name}, {match.birth}</h3>
                 </div>
 
@@ -130,7 +147,7 @@ function Dashboard({ user }) {
                 
 
                 <h3 style={{color: "pink"}}>Matches</h3> 
-                {user.my_match.slice(0, 4).map((match, index)=>{
+                {user.my_match.slice(user.my_match.length-4, user.my_match.length).map((match, index)=>{
                     return(
                         <div className='chat' key={match.id}>
                         <div className='chat-icon'>

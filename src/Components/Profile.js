@@ -62,15 +62,12 @@ function Profile({user}) {
                         I thank whatever gods may be
                         For my unconquerable soul.
 
-
-                        How charged with punishments the scroll,
-                        I am the master of my fate,
-                        I am the captain of my soul.
                     </p>
                 </div>
                 <div className='left-edits'>
                     
                     <button style={{cursor: "pointer"}} onClick= {handleLogout}>Log out</button>
+                    <button style={{cursor: "pointer"}} onClick= {handleLogout}>Delete</button>
                 </div>
             </div>
 

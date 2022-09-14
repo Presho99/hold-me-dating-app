@@ -30,7 +30,7 @@ function Signin({getUser}){
     .then(user => {
       setUser(user)
       getUser(user)
-      // history.push("/dashboard/main")
+      
     })
   }
 

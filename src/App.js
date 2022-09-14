@@ -29,7 +29,7 @@ function App() {
           <Header user={user} />
           <Route path="/dashboard/main">
 
-            <Dashboard user={user} />
+            <Dashboard dashUser={user} />
 
           </Route>
           <Route path="/dashboard/follow">
