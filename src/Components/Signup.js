@@ -51,7 +51,7 @@ function Signup({ getUser }) {
 
     return (
         <div className="signup">
-            <h1><FontAwesomeIcon icon={faHandHoldingHeart} style={{ fontSize: "80", color: "#9D2E3C" }} /></h1>
+            <h1><FontAwesomeIcon icon={faHandHoldingHeart} style={{ fontSize: "80", color: "#C298E0" }} /></h1>
             <form onSubmit={handleSubmit}>
 
                 <input type="text" placeholder='First name' value={signupDetails.first_name} name="first_name" onChange={handleChange}></input>

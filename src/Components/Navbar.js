@@ -12,8 +12,8 @@ function Navbar({getUser}) {
     return (
         <div className='home'>
             <div className='navbar' style={{ backgroundImage: "url('login.webp')" }}>
-                <button onClick={() => setLogin(false)} style={{cursor: "pointer"}}>Signup</button>
-                <button onClick={() => setLogin(true)}>Login</button>
+                <button className="one" onClick={() => setLogin(false)} style={{cursor: "pointer"}}><h1>SignUp</h1></button>
+                <button className="two" onClick={() => setLogin(true)} style={{cursor: "pointer"}}><h1>Login</h1></button>
             </div>
 
             {login ? <Signin getUser={getUser}/> : <Signup getUser={getUser}/>}

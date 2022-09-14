@@ -10,7 +10,7 @@
 .home{
   display: flex;
   width: 700px;
-background-color: pink;
+  background: linear-gradient(70deg, #120A24, #433178, #5244A2, #30245C, #120A24);
   height: 90vh;
   margin: 40px auto;
   justify-content: space-between;

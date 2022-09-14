@@ -11,7 +11,7 @@
       background-size: cover;
       width: 300px;
       height: 90vh;
-      padding: 10px;
+      
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
       z-index: 1;
@@ -20,13 +20,31 @@
   .navbar button{
       margin-top: 170px;
       margin-left: 160px;
+      background: transparent;
+      outline: none;
+      border: none;
+      color: pink;
+      padding: 10px 0 10px 10px;
+      transition: 0.3s ease-in;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      
+  }
+
+  .navbar button.one:hover{
+      color: pink;
+      background-color: #5244A2;
+  }
+
+  .navbar button.two:hover{
+    color: pink;
+    background-color: #4D3E94; 
   }
   
-  nav h1{
+  .navbar h1{
       
       text-transform: uppercase;
-      text-decoration: none;
-      margin-bottom: 70px;
+      
       
       
   }

@@ -2,7 +2,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-family: "Roboto", sans-serif;
     
+}
+
+.profile-page p{
+    color: #fff;
 }
 
 .prof-left{
@@ -68,7 +73,7 @@ img{
 }
 
 .line{
-    background-color: #9d2e3c;
+    background-color: pink;
     width: 2px;
     
 }
@@ -83,7 +88,7 @@ border: none;
 outline: none;
 margin-bottom: 10px;
 border-radius: 5px;
-background-color: pink;
+background-color: #C298E0;
 color: #142037;
 }
 

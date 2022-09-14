@@ -20,12 +20,12 @@
 
 .signup form input[type=text], .signup form input[type=password], .signup form input[type=date]{
     width: 200px;
-    color: #9d2e3c;
+    color: #C298E0;
     height: 40px;
     margin-bottom: 10px;
     outline: none;
     border: none;
-    border-bottom: 1px solid #9d2e3c;
+    border-bottom: 1px solid #C298E0;
     background-color: transparent;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -39,9 +39,9 @@
    outline: none;
    border: none;
     padding: 10px 5px 10px 5px;
-    background-color: #9d2e3c;
+    background-color: #C298E0;
     margin-top: 10px;
-    color: pink;
+    color: #5946A6;
     font-weight: bold;
 }
 
