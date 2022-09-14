@@ -1,21 +1,24 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import { NavLink } from "react-router-dom"
+import Signin from './Signin'
+import Signup from './Signup'
 
 
-function Navbar(){
-    return(
-        <div className='navbar' style={{backgroundImage: "url('login.webp')"}}>
-            <nav >
+function Navbar({getUser}) {
+    const [login, setLogin] = useState(true)
 
-                <NavLink to="/signup" style={{textDecoration: "none"}}><h1>Signup</h1></NavLink>
-                <NavLink to="/" style={{textDecoration: "none"}}><h1>Login</h1></NavLink>
-            </nav>
-            
+    return (
+        <div className='home'>
+            <div className='navbar' style={{ backgroundImage: "url('login.webp')" }}>
+                <button onClick={() => setLogin(false)} style={{cursor: "pointer"}}>Signup</button>
+                <button onClick={() => setLogin(true)}>Login</button>
+            </div>
 
-    
+            {login ? <Signin getUser={getUser}/> : <Signup getUser={getUser}/>}
         </div>
+
     )
 }
 
