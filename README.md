@@ -9,6 +9,8 @@ Click [here](https://github.com/Presho99/dating-app-backend) to view Sinatra bac
 ## Introduction
 HoldMe is a dating application that takes in the user's details and randomly pairs him or her with a potential match depending on the user's gender. The application contains a signup/signin page, a dashboard, and a final page that contains the entire list of all other people the user could match with. HoldMe is created using React, CSS, and Ruby. It is fully responsive as all pages have been styled using either grid or flexbox.
 
+## Pages
+
 ### Signin/Signup Page
 ![Screenshot from 2022-09-15 07-14-19](https://user-images.githubusercontent.com/73560150/190312964-560c4f2b-f92b-4403-a1c6-d9dc202a6f88.png)
 
@@ -23,4 +25,6 @@ The signup page also takes in a couple of the user's details and saves them to t
 ![Screenshot from 2022-09-15 07-42-00](https://user-images.githubusercontent.com/73560150/190316301-89a51571-257e-4fc6-8599-5f37062fdda3.png)
 
 The Dashboard contains a header and uses grid styling for the 5 sections inside it.
- ####    Grid 1
+ #### Grid 1
+ * Displays the user's profile
+ * 
