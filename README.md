@@ -26,5 +26,27 @@ The signup page also takes in a couple of the user's details and saves them to t
 
 The Dashboard contains a header and uses grid styling for the 5 sections inside it.
  #### Grid 1
- * Displays the user's profile
- * 
+ * Displays the user's profile: profile picture, name, field of work, gender, city, a link to the main matches page, and the user's bio.
+ * It also contains a log out button which when clicked will redirect the user to the signin page.
+ 
+ ### Grid 2
+ * Contains the images of the user's default matches.
+ * The images in this grid all have an "x" icon that allows the user to delete a match
+
+ ### Grid 3
+ * Contains notifications of the different people the user has matched with.
+ * Each notification show's the match's profile picture, name, and how long ago the match happened.
+ 
+ ### Grid 4
+ * contains a progress icon that shows whether the user's profile is complete.
+
+ ### Grid 5
+ * Displays a different quote everytime the app is reloaded.
+ 
+ The dashboard also uses media queries for responsivity.
+ ![Screenshot from 2022-09-15 08-15-01](https://user-images.githubusercontent.com/73560150/190320565-75c8e0da-8fa5-4dba-90c0-8631b3d67658.png)
+
+
+
+
+ 
