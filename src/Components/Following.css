@@ -6,7 +6,7 @@
 }
 
 .following-panel{
-    background-color: aqua;
+    background: linear-gradient(70deg, #120A24,  #30245C, #120A24);
     width: 300px;
     height: 300px;
     margin: 30px auto;
@@ -17,5 +17,13 @@
     width: 100%;
     height: 80%;
     border-radius: 0;
+}
+
+.following-panel h3{
+    color: #C298E0;
+}
+
+.following-panel p{
+    color: #fff;
 }
 

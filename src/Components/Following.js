@@ -52,7 +52,7 @@ function Following({ user }) {
                                     <h3>{follower.first_name}</h3>
                                     <p>{follower.job}</p>
                                 </div>
-                                <FontAwesomeIcon icon={faPlusCircle} onClick={handleAdd} />
+                                <FontAwesomeIcon icon={faPlusCircle} onClick={handleAdd} style={{color: "#C298E0", marginLeft:"20px", marginTop:"10px" }}/>
                             </div>
 
                         </div>

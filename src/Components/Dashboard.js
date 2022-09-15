@@ -63,9 +63,10 @@ function Dashboard({ dashUser }) {
     }
    
     function handleRemove(match){
-        fetch(`http://localhost:9393/match/${user.id}/${match.id}`, {method : "DELETE"})
+        fetch(`http://localhost:9393/match?username=${user.first_name}&matchname=${match.first_name}`)
         .then(r => r.json())
-        .then(()=> {
+        .then((user)=> {
+            setUser(user)
             alert(`${match.first_name} is no longer your match`)
         })
 
