@@ -23,4 +23,4 @@ The signup page also takes in a couple of the user's details and saves them to t
 ![Screenshot from 2022-09-15 07-42-00](https://user-images.githubusercontent.com/73560150/190316301-89a51571-257e-4fc6-8599-5f37062fdda3.png)
 
 The Dashboard contains a header and uses grid styling for the 5 sections inside it.
- #### Grid 1
+ ####    Grid 1
