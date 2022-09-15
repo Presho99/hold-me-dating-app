@@ -15,6 +15,12 @@ HoldMe is a dating application that takes in the user's details and randomly pai
 The signin page is the home page. It takes in the user's name and password then redirects them to the dashboard.
 
 
+![Screenshot from 2022-09-15 07-21-09](https://user-images.githubusercontent.com/73560150/190313717-2a9ea907-bd42-4aad-b614-673ad63ce6d8.png)
+The signup page also takes in a couple of the user's details and saves them to the database. The user is then redirected to the dashboard upon signing up successfully.
 
-![Screenshot from 2022-09-15 07-14-19](https://user-images.githubusercontent.com/73560150/190313380-1785754f-8843-4c1a-b177-1d1ddda043e6.png)
-The signup page takes a couple of user's details then redirects them to the dashboard.
+### Dashboard
+
+![Screenshot from 2022-09-15 07-42-00](https://user-images.githubusercontent.com/73560150/190316301-89a51571-257e-4fc6-8599-5f37062fdda3.png)
+
+The Dashboard contains a header and uses grid styling for the 5 sections inside it.
+#### Grid 1
